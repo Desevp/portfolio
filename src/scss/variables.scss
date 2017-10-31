@@ -12,11 +12,7 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  hsl(208, 98%, 43%);
-$color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
-$color-warning:               hsl(35, 84%, 62%);
-
+$color-main:                  #c0392b;
 
 // Семантические цвета
 
@@ -29,22 +25,20 @@ $link-color--hover:           darken($color-main, 15%);
 
 $border-color:                $gray-light;
 
-
-
 // Базовая типографика
 
-$font-size:                   14px;
-$font-size--h1:               2.25em;
-$font-size--h2:               1.875em;
+$font-size:                   24px;
+$font-size--h1:               3.333em;
+$font-size--h2:               3.333em;
 $font-size--h3:               1.5em;
 $font-size--h4:               1.25em;
 $font-size--h5:               1em;
 $font-size--h6:               1em;
 $font-size--small:            0.75em;
 
-$line-height:                 1.375em;
+$line-height:                 1.8em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family--serif:          'Georgia', 'Times New Roman', 'Times', serif;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
 $font-family--headings:       $font-family;
@@ -64,7 +58,7 @@ $container-sm:                    100%;
 $container-mobile:                100%;
 $container-tablet:                $screen-tablet - 30;
 $container-desktop:               $screen-desktop - 30;
-$container-wide-desktop:   $screen-wide-desktop - 30;
+$container-wide-desktop:          $screen-wide-desktop - 30;
 
 // Разное
 

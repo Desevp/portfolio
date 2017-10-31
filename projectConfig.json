@@ -5,6 +5,7 @@
     "object-fit-polyfill": []
   },
   "addCssBefore": [
+    "../../node_modules/normalize.css/normalize.css",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss"
