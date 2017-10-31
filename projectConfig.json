@@ -2,7 +2,12 @@
   "blocks": {
     "typo": [],
     "sprite-svg": [],
-    "object-fit-polyfill": []
+    "object-fit-polyfill": [],
+    "page": [],
+    "header": [],
+    "screen": [],
+    "link": [],
+    "social": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

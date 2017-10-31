@@ -1,0 +1,23 @@
+.social {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &__item {
+        position: relative;
+        width: rem(28);
+        height: rem(28);
+        margin-right: rem(16);
+        border-radius: 50%;
+        fill: $theme-color;
+        transition: fill $transition-time;
+
+        &:hover {
+            fill: rgba($theme-color, $opacity);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

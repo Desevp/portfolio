@@ -1,0 +1,17 @@
+.header {
+    position: fixed;
+    width: 100%;
+    padding-top: 6.5%;
+    padding-left: calc(100% / 12);
+    padding-right: calc(100% / 12);
+    z-index: 1;
+
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        padding-left: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

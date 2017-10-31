@@ -11,7 +11,7 @@ const dirs = projectConfig.dirs;
 const mkdirp = require('mkdirp');
 
 const blockName = process.argv[2];          // получим имя блока
-const defaultExtensions = ['scss', 'html', 'img']; // расширения по умолчанию
+const defaultExtensions = ['scss']; // расширения по умолчанию
 const extensions = uniqueArray(defaultExtensions.concat(process.argv.slice(3)));  // добавим введенные при вызове расширения (если есть)
 
 // Если есть имя блока
@@ -20,12 +20,12 @@ if (blockName) {
   mkdirp(dirPath, (err) => {                                           // создаем
     // Если какая-то ошибка — покажем
     if (err) {
-      console.error(`[NTH] Отмена операции: ${err}`);
+      console.error(`Отмена операции: ${err}`);
     }
 
     // Нет ошибки, поехали!
     else {
-      console.log(`[NTH] Создание папки ${dirPath} (если отсутствует)`);
+      console.log(`Создание папки ${dirPath} (если отсутствует)`);
 
       // Обходим массив расширений и создаем файлы, если они еще не созданы
       extensions.forEach((extention) => {
@@ -35,7 +35,6 @@ if (blockName) {
 
         // Если это SCSS
         if (extention === 'scss') {
-          fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов, \n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName} {\n\n  $block-name:                &; // #{$block-name}__element\n\n}\n`;
           // fileCreateMsg = '';
 
           // Добавим созданный файл
@@ -50,13 +49,12 @@ if (blockName) {
             projectConfig.blocks[blockName] = [];
             const newPackageJson = JSON.stringify(projectConfig, '', 2);
             fs.writeFileSync('./projectConfig.json', newPackageJson);
-            fileCreateMsg = '[NTH] Подключение блока добавлено в projectConfig.json';
+            fileCreateMsg = 'Подключение блока добавлено в projectConfig.json';
           }
         }
 
         // Если это HTML
         else if (extention === 'html') {
-          fileContent = `<!--DEV\n\nДля использования этого файла как шаблона:\n\n@ @include('blocks/${blockName}/${blockName}.html')\n\n(Нужно убрать пробел между символами @)\nПодробнее: https://www.npmjs.com/package/gulp-file-include\n\n\n\n<div class="${blockName}">content</div>\n\n-->\n`;
           // fileCreateMsg = '';
         }
 
@@ -71,10 +69,10 @@ if (blockName) {
           if (fileExist(imgFolder) === false) {
             mkdirp(imgFolder, (err) => {
               if (err) console.error(err);
-              else console.log(`[NTH] Создание папки: ${imgFolder} (если отсутствует)`);
+              else console.log(`Создание папки: ${imgFolder} (если отсутствует)`);
             });
           } else {
-            console.log(`[NTH] Папка ${imgFolder} НЕ создана (уже существует) `);
+            console.log(`Папка ${imgFolder} НЕ создана (уже существует) `);
           }
         }
 
@@ -82,21 +80,21 @@ if (blockName) {
         if (fileExist(filePath) === false && extention !== 'img') {
           fs.writeFile(filePath, fileContent, (err) => {
             if (err) {
-              return console.log(`[NTH] Файл НЕ создан: ${err}`);
+              return console.log(`Файл НЕ создан: ${err}`);
             }
-            console.log(`[NTH] Файл создан: ${filePath}`);
+            console.log(`Файл создан: ${filePath}`);
             if (fileCreateMsg) {
               console.warn(fileCreateMsg);
             }
           });
         } else if (extention !== 'img') {
-          console.log(`[NTH] Файл НЕ создан: ${filePath} (уже существует)`);
+          console.log(`Файл НЕ создан: ${filePath} (уже существует)`);
         }
       });
     }
   });
 } else {
-  console.log('[NTH] Отмена операции: не указан блок');
+  console.log('Отмена операции: не указан блок');
 }
 
 // Оставить в массиве только уникальные значения (убрать повторы)

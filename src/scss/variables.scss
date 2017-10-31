@@ -12,7 +12,7 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  #c0392b;
+$theme-color:                  #c0392b;
 
 // Семантические цвета
 
@@ -20,12 +20,14 @@ $text-color:                  $gray-darkest;
 $text-color--muted:           $gray;
 $body-bg:                     #fff;
 
-$link-color:                  $color-main;
-$link-color--hover:           darken($color-main, 15%);
+$link-color:                  $theme-color;
+$link-color--hover:           darken($theme-color, 15%);
 
 $border-color:                $gray-light;
 
 // Базовая типографика
+
+$basefontSize: 16px;
 
 $font-size:                   24px;
 $font-size--h1:               3.333em;
