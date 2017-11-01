@@ -7,13 +7,6 @@
 
     &__item {
         position: relative;
-        opacity: 0.3;
-
-        &:hover {
-            cursor: pointer;
-            opacity: 1;
-            transition: opacity $transition-time;
-        }
 
         $desktop-switch-color: #ffffff;
 
@@ -39,10 +32,6 @@
             background-image: svg-load('../blocks/devices-switch/img_to_bg/phone.svg', fill = $desktop-switch-color);
             background-repeat: no-repeat;
             background-size: cover;
-        }
-
-        &_is-active {
-            opacity: 1;
         }
     }
 }

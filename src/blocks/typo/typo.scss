@@ -33,6 +33,14 @@ body {
     font-weight: 300;
     line-height: $line-height;
     color: $text-color;
+
+    @media (max-width: $screen-desktop) {
+        @include font(22px);
+    }
+
+    @media (max-width: $screen-mobile) {
+        @include font(14px);
+    }
 }
 
 // .h1,

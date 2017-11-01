@@ -1,35 +1,53 @@
 
-(function(){
-    $(".swipe-devices").swipe( {
-            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-
-                var activeClass = 'swipe-devices__item_is-active';
-
-
-                var img_active=$(this).children('.'+activeClass);
-
-                var num_img=img_active.index();
-
-                var d_pr=$(this).attr('data-project');
-
-               $('.swipe-devices [data-project= ' + d_pr + ' ] .device-icon').eq(num_img).removeClass('is-active');
+var swipeDevice = function () {
+    var swipeContent = $('.swipe-devices');
+    var contentItem = '.swipe-devices__item';
+    var contentItemActive = 'swipe-devices__item_is-active';
+    var switchItem = '.swipe-devices__switch-item';
+    var switchItemActive = 'swipe-devices__switch-item_is-active';
 
 
-                if (num_img===$(this).children.length) {
-                    num_img=-1;
-                }
+    swipeContent.swipe({
+        swipe: function (event, direction) {
 
-                img_active.removeClass(activeClass);
+            var current2 = this.find('.'+ contentItemActive).index();
+            toggleImage(current2, direction);
+        },
+        threshold: 0
 
-                if (direction==="right"){
-                    $(this).children().eq(num_img-1).addClass(activeClass);
-                    $('.swipe-devices [data-project= ' + d_pr + ' ] .device-icon').eq(num_img-1).addClass(activeClass);
-                }
-                else{
-                    $(this).children().eq(num_img+1).addClass(activeClass);
-                    $('.swipe-devices [data-project= ' + d_pr + ' ] .device-icon').eq(num_img+1).addClass(activeClass);
-                }
-            },
-            threshold:0
+    });
+
+    function toggleImage(current, direction) {
+
+        $(contentItem).each(function (){
+            $(this).removeClass(contentItemActive);
         });
-}());
+
+        $(switchItem).each(function (){
+            $(this).removeClass(switchItemActive);
+        });
+
+        if (direction === "right"){
+            current++;
+            if (current > ($(contentItem).length - 1)) {
+                current = 0;
+            }
+        }
+
+        if (direction === "left") {
+            current--;
+            if (current > ($(contentItem).length - 1)) {
+                current = $(contentItem).length - 1;
+            }
+        }
+
+        $(contentItem).eq(current).addClass(contentItemActive);
+        $(switchItem).eq(current).addClass(switchItemActive);
+    }
+
+    $(switchItem).on('mouseenter touchstart', function () {
+        var current = $(this).index();
+        toggleImage(current);
+    });
+
+} ();

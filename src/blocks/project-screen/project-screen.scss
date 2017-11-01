@@ -7,6 +7,8 @@
     &__container {
         display: flex;
         align-items: center;
+        width: 100%;
+        margin-top: 12vh;
         padding-left: 8.33%;
         padding-right: 4%;
     }
@@ -21,8 +23,11 @@
         position: relative;
         margin-left: rem(30);
         flex-grow: 1;
-        width: 600px;
-        background-color: rgba(97, 156, 209, 0.78);
+    }
+
+    &__carousel-inner {
+        position: relative;
+        margin: 0 auto;
     }
 
     &__caption {
@@ -35,6 +40,6 @@
 
     &__switchers {
         position: relative;
-        margin-top: rem(20);
+        margin-top: rem(70);
     }
 }
