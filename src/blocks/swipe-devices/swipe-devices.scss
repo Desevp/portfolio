@@ -1,0 +1,10 @@
+.swipe-devices {
+
+    &__item {
+        display: none;
+
+        &_is-active {
+            display: block;
+        }
+    }
+}
