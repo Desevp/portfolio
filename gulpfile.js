@@ -171,6 +171,8 @@ gulp.task('copy:favicon', function () {
 // Копирование изображений
 gulp.task('copy:img', function () {
   console.log('---------- Копирование изображений');
+
+  console.log(lists.img);
   return gulp.src(lists.img)
     .pipe(newer(dirs.buildPath + '/img'))  // оставить в потоке только изменившиеся файлы
     .pipe(size({

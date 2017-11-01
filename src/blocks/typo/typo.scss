@@ -49,7 +49,7 @@ h5,
 h6 {
     font-family: $font-family--headings;
     font-weight: 700;
-    line-height: $line-height;
+    line-height: 1.2;
     color: currentColor;
 }
 
@@ -60,7 +60,7 @@ h1,
 h2,
 h3 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: rem(20);
 }
 
 // .h4,

@@ -1,0 +1,48 @@
+.devices-switch {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        position: relative;
+        opacity: 0.3;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity $transition-time;
+        }
+
+        $desktop-switch-color: #ffffff;
+
+        &_desktop {
+            width: 52px;
+            height: 38px;
+            background-image: svg-load('../blocks/devices-switch/img_to_bg/desktop.svg', fill = $desktop-switch-color);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &_tablet {
+            width: 52px;
+            height: 38px;
+            background-image: svg-load('../blocks/devices-switch/img_to_bg/tablet.svg', fill = $desktop-switch-color);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &_phone {
+            width: 24px;
+            height: 38px;
+            background-image: svg-load('../blocks/devices-switch/img_to_bg/phone.svg', fill = $desktop-switch-color);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &_is-active {
+            opacity: 1;
+        }
+    }
+}

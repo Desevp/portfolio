@@ -1,0 +1,38 @@
+.project-screen {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-left: 8.33%;
+        padding-right: 4%;
+    }
+
+    &__description {
+        position: relative;
+        width: 40%;
+        flex-shrink: 0;
+    }
+
+    &__carousel {
+        position: relative;
+        margin-left: rem(30);
+        flex-grow: 1;
+    }
+
+    &__caption {
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: rem(45);
+    }
+
+    &__switchers {
+        position: relative;
+        margin-top: rem(20);
+    }
+}
