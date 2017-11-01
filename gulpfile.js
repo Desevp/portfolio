@@ -40,7 +40,6 @@ fs.writeFileSync(dirs.srcPath + 'scss/style.scss', styleImports);
 // Определим разработка это или финальная сборка
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
-
 // Плагины postCSS, которыми обрабатываются все стилевые файлы
 let postCssPlugins = [
   autoprefixer({
@@ -286,7 +285,7 @@ gulp.task('html', function() {
 gulp.task('js', function (callback) {
   const uglify = require('gulp-uglify');
 
-  const babel = require('gulp-babel');
+  // const babel = require('gulp-babel');
   const concat = require('gulp-concat');
   if(lists.js.length > 0){
     console.log('---------- Обработка JS');
@@ -301,12 +300,11 @@ gulp.task('js', function (callback) {
           this.emit('end');
         }
       }))
-
-      .pipe(babel({
-        presets: ['es2015']
-      }))
+    //   .pipe(babel({
+    //     "presets": [ [ "es2015", { modules: false } ] ]
+    //   }))
       .pipe(concat('script.min.js'))
-      .pipe(gulpIf(!isDev, uglify()))
+      .pipe(gulpIf(isDev, uglify()))
       .pipe(size({
         title: 'Размер',
         showFiles: true,

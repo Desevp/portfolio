@@ -8,7 +8,9 @@
     "screen": [],
     "link": [],
     "social": [],
-    "main-screen": []
+    "main-screen": [],
+    "visually-hidden": [],
+    "to-next": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
@@ -23,7 +25,8 @@
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
-    "./node_modules/swipejs/build/swipe.min.js"
+    "./node_modules/swipejs/build/swipe.min.js",
+    "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
