@@ -33,61 +33,95 @@
     </header>
     <h1 class="visually-hidden">Jane's protfolio</h1>
 
-    <main class="main">
-        <section class="screen main-screen">
-            <div class="main-screen__text-block">
-                <h2>Привет!</h2>
-                <div class="main-screen__txt">
-                    Я&nbsp;Женя. Верстаю адаптивные сайты.
-                    Живу в&nbsp;Питере.
-                </div>
-            </div>
-            <div class="main-screen__bottom">
-                <a class="link link_arrow to-next" id="toNext" href="#">
-                    Проекты
-                </a>
-            </div>
-        </section>
-        <section class="screen project-screen project-zykina" id="firstProject">
-            <div class="project-screen__container">
-
-                <div class="project-screen__description">
-                    <h2 class="project-screen__title">Zykina Project</h2>
-                    <div class="project-screen__caption">
-                        Сайт студии дизайна интерьеров
-                    </div>
-                    <a class="link project-screen__link" href="#">Верстка проекта</a>
-                </div>
-                <div class="project-screen__switchers devices-switch">
-                    <div class="devices-switch__item devices-switch__item_desktop swipe-devices__switch-item swipe-devices__switch-item_is-active">
-
-                    </div>
-                    <div class="devices-switch__item devices-switch__item_tablet swipe-devices__switch-item">
-
-                    </div>
-                    <div class="devices-switch__item devices-switch__item_phone swipe-devices__switch-item">
-
+    <main class="main iscroll">
+        <div class="iscroll__inner">
+            <section class="screen main-screen">
+                <div class="main-screen__text-block">
+                    <h2>Привет!</h2>
+                    <div class="main-screen__txt">
+                        Я&nbsp;Женя. Верстаю адаптивные сайты.
+                        Живу в&nbsp;Питере.
                     </div>
                 </div>
-                <div class="project-screen__carousel">
-                    <div class="swipe-devices project-screen__carousel-inner">
-                        <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
-                            <img src="/img/projects/zp/zp-desktop.png" alt="Desktop version">
+                <div class="main-screen__bottom">
+                    <a class="link link_arrow to-next" id="toNext" href="#">
+                        Проекты
+                    </a>
+                </div>
+            </section>
+            <section class="screen project-screen project-zykina" id="firstProject">
+                <div class="project-screen__container">
+
+                    <div class="project-screen__description">
+                        <h2 class="project-screen__title">Zykina Project</h2>
+                        <div class="project-screen__caption">
+                            Сайт студии дизайна интерьеров
                         </div>
-                        <div class="swipe-devices__item">
-                            <img src="/img/projects/zp/zp-tablet.png" alt="Tablet version">
+                        <a class="link project-screen__link" href="#">Верстка проекта</a>
+                    </div>
+                    <div class="project-screen__switchers devices-switch">
+                        <div class="devices-switch__item devices-switch__item_desktop swipe-devices__switch-item swipe-devices__switch-item_is-active">
+
                         </div>
-                        <div class="swipe-devices__item">
-                            <img src="/img/projects/zp/zp-phone.png" alt="Phone version">
+                        <div class="devices-switch__item devices-switch__item_tablet swipe-devices__switch-item">
+
+                        </div>
+                        <div class="devices-switch__item devices-switch__item_phone swipe-devices__switch-item">
+
                         </div>
                     </div>
+                    <div class="project-screen__carousel">
+                        <div class="swipe-devices project-screen__carousel-inner">
+                            <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
+                                <img src="/img/projects/zp/zp-desktop.png" alt="Desktop version">
+                            </div>
+                            <div class="swipe-devices__item">
+                                <img src="/img/projects/zp/zp-tablet.png" alt="Tablet version">
+                            </div>
+                            <div class="swipe-devices__item">
+                                <img src="/img/projects/zp/zp-phone.png" alt="Phone version">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <section class="screen project-screen project-zykina">
+                <div class="project-screen__container">
 
-            </div>
-        </section>
+                    <div class="project-screen__description">
+                        <h2 class="project-screen__title">Zykina Project</h2>
+                        <div class="project-screen__caption">
+                            Сайт студии дизайна интерьеров
+                        </div>
+                        <a class="link project-screen__link" href="#">Верстка проекта</a>
+                    </div>
+                    <div class="project-screen__switchers devices-switch">
+                        <div class="devices-switch__item devices-switch__item_desktop swipe-devices__switch-item swipe-devices__switch-item_is-active">
 
-        <section class="screen project-screen">
-        </section>
+                        </div>
+                        <div class="devices-switch__item devices-switch__item_tablet swipe-devices__switch-item">
+
+                        </div>
+                        <div class="devices-switch__item devices-switch__item_phone swipe-devices__switch-item">
+
+                        </div>
+                    </div>
+                    <div class="project-screen__carousel">
+                        <div class="swipe-devices project-screen__carousel-inner">
+                            <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
+                                <img src="/img/projects/zp/zp-desktop.png" alt="Desktop version">
+                            </div>
+                            <div class="swipe-devices__item">
+                                <img src="/img/projects/zp/zp-tablet.png" alt="Tablet version">
+                            </div>
+                            <div class="swipe-devices__item">
+                                <img src="/img/projects/zp/zp-phone.png" alt="Phone version">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
   @@include('_include/page_bottom.html')

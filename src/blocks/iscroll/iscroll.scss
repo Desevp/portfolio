@@ -1,0 +1,38 @@
+.iscroll {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+    }
+}
+
+.iScrollVerticalScrollbar {
+    position: absolute;
+    z-index: 9999;
+    width: 12px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+
+    &:hover {
+        width: 18px;
+        transition: width 0.3s ease;
+    }
+
+    @media (max-width: $screen-tablet) {
+        width: 5px;
+    }
+}
+
+.iScrollIndicator {
+    position: absolute;
+    width: 100%;
+    background: $theme-color;
+}
