@@ -5,29 +5,85 @@
 
 
     &__container {
+        position: relative;
         display: flex;
-        align-items: center;
-        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        margin: 0 5%;
         margin-top: 12vh;
-        padding-left: 8.33%;
-        padding-right: 4%;
+
+        @media (max-width: $screen-tablet) {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        @media (max-width: $screen-fablet) {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            order: 1;
+            height: 100%;
+            padding-top: 120px;
+            padding-bottom: 5vh;
+            margin-top: 0;
+        }
+
+        @media (max-width: $screen-mobile) {
+            padding-top: 10vh;
+        }
     }
 
     &__description {
         position: relative;
         width: 40%;
-        flex-shrink: 0;
+
+        @media (max-width: $screen-tablet) {
+            width: 50%;
+        }
+
+        @media (max-width: $screen-fablet) {
+            width: 100%;
+            flex-shrink: 0;
+            text-align: center;
+        }
     }
 
     &__carousel {
-        position: relative;
-        margin-left: rem(30);
-        flex-grow: 1;
+        position: absolute;
+        left: 40%;
+        width: 60%;
+
+        @media (max-width: $screen-tablet) {
+            left: 55%;
+            width: 45%;
+        }
+
+        @media (max-width: $screen-fablet) {
+            position: relative;
+            left: 0;
+            width: 100%;
+            order: 2;
+            height: auto;
+            flex-grow: 1;
+        }
     }
 
     &__carousel-inner {
         position: relative;
         margin: 0 auto;
+    }
+
+    &__title {
+
+        @media (max-width: $screen-fablet) {
+            margin-bottom: rem(15);
+        }
+
+        @media (max-width: $screen-mobile) {
+            margin-bottom: rem(10);
+        }
     }
 
     &__caption {
@@ -36,10 +92,25 @@
     &__link {
         display: inline-block;
         margin-top: rem(45);
+
+        @media (max-width: $screen-fablet) {
+            margin-top: rem(35);
+        }
+
+        @media (max-width: $screen-mobile) {
+            margin-top: rem(20);
+        }
     }
 
     &__switchers {
         position: relative;
+        width: 50%;
         margin-top: rem(70);
+
+        @media (max-width: $screen-fablet) {
+            width: 100%;
+            order: 3;
+            margin-top: 0;
+        }
     }
 }

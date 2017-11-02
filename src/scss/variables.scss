@@ -49,18 +49,17 @@ $font-family--headings:       $font-family;
 
 // Ширины
 
-$screen-xs:                   0;
-$screen-sm:                   480px;
-$screen-mobile:               768px;
+$screen-mobile:               480px;
+$screen-fablet:               768px;
 $screen-tablet:               1024px;
 $screen-desktop:              1440px;
-$screen-wide-desktop:          1800px;
+$screen-wide-desktop:         1800px;
 
-$container-sm:                    100%;
 $container-mobile:                100%;
-$container-tablet:                $screen-tablet - 30;
-$container-desktop:               $screen-desktop - 30;
-$container-wide-desktop:          $screen-wide-desktop - 30;
+$container-fablet:            100%;
+$container-tablet:            $screen-tablet - 30;
+$container-desktop:           $screen-desktop - 30;
+$container-wide-desktop:      $screen-wide-desktop - 30;
 
 // Разное
 

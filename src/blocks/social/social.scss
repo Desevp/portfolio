@@ -2,25 +2,23 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
+    overflow: visible;
 
     &__item {
         position: relative;
         width: rem(28);
         height: rem(28);
-        margin-right: rem(16);
         border-radius: 50%;
+        transform: scale(1);
+        transition: transform $transition-time;
 
         svg {
             fill: $theme-color;
-            transition: fill $transition-time;
         }
 
-        &:hover svg {
-            fill: rgba($theme-color, $opacity);
-        }
-
-        &:last-child {
-            margin-right: 0;
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }

@@ -1,24 +1,46 @@
 .swipe-devices {
+    position: relative;
+    padding: rem(30) 0;
+    height: 60vh;
+
+    @media (max-width: $screen-fablet) {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
 
     &__item {
-        opacity: 0;
-        height: 0;
-        max-height: 60vh;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        opacity: 0;
+        height: 0;
         transition: opacity $transition-time;
 
+        &_larger img {
+
+            @media (max-width: $screen-tablet) {
+                position: relative;
+                max-width: 200%;
+                left: 30%;
+            }
+
+            @media (max-width: $screen-fablet) {
+                max-width: 100%;
+                left: 0;
+            }
+        }
 
         img {
-
             max-height: 100%;
         }
 
-
         &_is-active {
             opacity: 1;
-            height: 60vh;
+            height: 100%;
         }
     }
 

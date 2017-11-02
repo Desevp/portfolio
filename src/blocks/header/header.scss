@@ -1,10 +1,27 @@
 .header {
     position: fixed;
     width: 100%;
-    padding-top: 6.5%;
+    padding-top: rem(90);
     padding-left: calc(100% / 12);
     padding-right: calc(100% / 12);
     z-index: 1;
+
+    @media (max-width: $screen-tablet) {
+        padding-top: rem(60);
+        padding-left: rem(60);
+        padding-right: rem(60);
+    }
+
+    @media (max-width: $screen-fablet) {
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+
+    @media (max-width: $screen-mobile) {
+        padding-top: rem(40);
+        padding-left: rem(30);
+        padding-right: rem(30);
+    }
 
 
     &__inner {
@@ -13,5 +30,15 @@
         padding-left: 50%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $screen-tablet) {
+            padding-left: 0;
+        }
+    }
+
+    &__social {
+        position: relative;
+        width: rem(116);
     }
 }

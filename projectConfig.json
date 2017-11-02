@@ -14,7 +14,8 @@
     "project-screen": [],
     "project-zykina": [],
     "devices-switch": [],
-    "swipe-devices": []
+    "swipe-devices": [],
+    "main": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

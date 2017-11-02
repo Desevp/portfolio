@@ -9,6 +9,7 @@ const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
 const autoprefixer = require("autoprefixer");
 const mqpacker = require("css-mqpacker");
+const sortCSSmq = require('sort-css-media-queries');
 const atImport = require("postcss-import");
 const cleanss = require('gulp-cleancss');
 const inlineSVG = require('postcss-inline-svg');
@@ -46,7 +47,7 @@ let postCssPlugins = [
     browsers: ['last 2 version']
   }),
   mqpacker({
-    sort: true
+      sort: sortCSSmq.desktopFirst
   }),
   atImport(),
   inlineSVG(),
@@ -91,9 +92,9 @@ gulp.task('style', function () {
     .pipe(debug({title: "Style:"}))
     .pipe(sass())
     .pipe(postcss(postCssPlugins))
-    .pipe(gulpIf(!isDev, cleanss()))
+    .pipe(gulpIf(isDev, cleanss()))
     .pipe(rename('style.min.css'))
-    .pipe(gulpIf(isDev, sourcemaps.write('/')))
+    .pipe(gulpIf(!isDev, sourcemaps.write('/')))
     .pipe(size({
       title: 'Размер',
       showFiles: true,
@@ -125,8 +126,8 @@ gulp.task('style:single', function () {
       .pipe(debug({title: "Single style:"}))
       .pipe(sass())
       .pipe(postcss(postCssPlugins))
-      .pipe(gulpIf(!isDev, cleanss()))
-      .pipe(gulpIf(isDev, sourcemaps.write('/')))
+      .pipe(gulpIf(isDev, cleanss()))
+      .pipe(gulpIf(!isDev, sourcemaps.write('/')))
       .pipe(size({
         title: 'Размер',
         showFiles: true,

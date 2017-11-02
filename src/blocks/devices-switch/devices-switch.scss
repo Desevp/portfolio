@@ -16,6 +16,11 @@
             background-image: svg-load('../blocks/devices-switch/img_to_bg/desktop.svg', fill = $desktop-switch-color);
             background-repeat: no-repeat;
             background-size: cover;
+
+            @media (max-width: $screen-fablet) {
+                width: 46px;
+                height: 34px;
+            }
         }
 
         &_tablet {
@@ -24,6 +29,11 @@
             background-image: svg-load('../blocks/devices-switch/img_to_bg/tablet.svg', fill = $desktop-switch-color);
             background-repeat: no-repeat;
             background-size: cover;
+
+            @media (max-width: $screen-fablet) {
+                width: 44px;
+                height: 34px;
+            }
         }
 
         &_phone {
@@ -32,6 +42,11 @@
             background-image: svg-load('../blocks/devices-switch/img_to_bg/phone.svg', fill = $desktop-switch-color);
             background-repeat: no-repeat;
             background-size: cover;
+
+            @media (max-width: $screen-fablet) {
+                width: 22px;
+                height: 34px;
+            }
         }
     }
 }
