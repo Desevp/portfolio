@@ -7,7 +7,13 @@ window.onload = function() {
         mouseWheel: true,
         interactiveScrollbars: true,
         scrollbars: 'custom',
-        snap: '.screen'
+        snap: '.screen',
+        bounce: true,
+        click: true,
+        disableMouse: false,
+        disablePointer: true,
+        disableTouch: false,
+        preventDefault: false
     }
 
     setTimeout(function() {

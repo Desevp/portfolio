@@ -9,6 +9,7 @@
         position: relative;
 
         $desktop-switch-color: #ffffff;
+        $desktop-switch-color-dark: #1a1a1a;
 
         &_desktop {
             width: 52px;
@@ -20,6 +21,10 @@
             @media (max-width: $screen-fablet) {
                 width: 46px;
                 height: 34px;
+            }
+
+            .devices-switch_dark & {
+                background-image: svg-load('../blocks/devices-switch/img_to_bg/desktop.svg', fill = $desktop-switch-color-dark);
             }
         }
 
@@ -34,6 +39,10 @@
                 width: 44px;
                 height: 34px;
             }
+
+            .devices-switch_dark & {
+                background-image: svg-load('../blocks/devices-switch/img_to_bg/tablet.svg', fill = $desktop-switch-color-dark);
+            }
         }
 
         &_phone {
@@ -46,6 +55,10 @@
             @media (max-width: $screen-fablet) {
                 width: 22px;
                 height: 34px;
+            }
+
+            .devices-switch_dark & {
+                background-image: svg-load('../blocks/devices-switch/img_to_bg/phone.svg', fill = $desktop-switch-color-dark);
             }
         }
     }

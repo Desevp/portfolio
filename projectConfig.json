@@ -16,7 +16,8 @@
     "devices-switch": [],
     "swipe-devices": [],
     "main": [],
-    "iscroll": []
+    "iscroll": [],
+    "project-lalvani": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
