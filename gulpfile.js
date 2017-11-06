@@ -92,9 +92,9 @@ gulp.task('style', function () {
     .pipe(debug({title: "Style:"}))
     .pipe(sass())
     .pipe(postcss(postCssPlugins))
-    .pipe(gulpIf(isDev, cleanss()))
+    .pipe(gulpIf(!isDev, cleanss()))
     .pipe(rename('style.min.css'))
-    .pipe(gulpIf(!isDev, sourcemaps.write('/')))
+    .pipe(gulpIf(isDev, sourcemaps.write('/')))
     .pipe(size({
       title: 'Размер',
       showFiles: true,
@@ -126,8 +126,8 @@ gulp.task('style:single', function () {
       .pipe(debug({title: "Single style:"}))
       .pipe(sass())
       .pipe(postcss(postCssPlugins))
-      .pipe(gulpIf(isDev, cleanss()))
-      .pipe(gulpIf(!isDev, sourcemaps.write('/')))
+      .pipe(gulpIf(!isDev, cleanss()))
+      .pipe(gulpIf(isDev, sourcemaps.write('/')))
       .pipe(size({
         title: 'Размер',
         showFiles: true,
@@ -287,13 +287,10 @@ gulp.task('html', function() {
 // Конкатенация и углификация Javascript
 gulp.task('js', function (callback) {
   const uglify = require('gulp-uglify');
-
-  // const babel = require('gulp-babel');
   const concat = require('gulp-concat');
   if(lists.js.length > 0){
     console.log('---------- Обработка JS');
     return gulp.src(lists.js)
-
       .pipe(plumber({
         errorHandler: function(err) {
           notify.onError({
@@ -303,11 +300,8 @@ gulp.task('js', function (callback) {
           this.emit('end');
         }
       }))
-    //   .pipe(babel({
-    //     "presets": [ [ "es2015", { modules: false } ] ]
-    //   }))
       .pipe(concat('script.min.js'))
-      .pipe(gulpIf(isDev, uglify()))
+      .pipe(gulpIf(!isDev, uglify()))
       .pipe(size({
         title: 'Размер',
         showFiles: true,
