@@ -13,7 +13,9 @@ window.onload = function() {
         disableMouse: false,
         disablePointer: true,
         disableTouch: false,
-        preventDefault: false
+        preventDefault: false,
+        blockMomentum: true,
+        snapSpeed: 600
     }
 
     setTimeout(function() {
