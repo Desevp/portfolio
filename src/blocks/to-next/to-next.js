@@ -1,7 +1,5 @@
 $( document ).ready(function() {
-    $("#toNext").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#firstProject").offset().top
-        }, 1500);
+    $( "#toNext" ).click(function() {
+        pageScroll.goToPage(0, 1, 600, IScroll.utils.ease.quadratic);
     });
 });

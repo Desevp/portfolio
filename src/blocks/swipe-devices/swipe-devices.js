@@ -1,19 +1,14 @@
 
 var swipeDevice = function (project) {
     var swipeContent = project.find('.swipe-devices');
-    console.log(swipeContent);
     var contentItem = project.find('.swipe-devices__item');
-    console.log(contentItem);
     var contentItemActive = 'swipe-devices__item_is-active';
     var switchItem = project.find('.swipe-devices__switch-item');
-    console.log(switchItem);
     var switchItemActive = 'swipe-devices__switch-item_is-active';
 
     swipeContent.swipe({
         swipe: function (event, direction) {
-            console.log('test');
             var current = this.find('.'+ contentItemActive).index();
-            console.log(current);
             toggleImage(current, direction);
         },
         threshold: 0
