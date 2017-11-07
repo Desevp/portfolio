@@ -2,38 +2,33 @@
     position: fixed;
     width: 100%;
     padding-top: rem(90);
-    padding-left: calc(100% / 12);
-    padding-right: calc(100% / 12);
+    // padding-left: calc(100% / 12);
+    // padding-right: calc(100% / 12);
     z-index: 2;
+
+    @media (max-width: $screen-desktop) {
+        padding-top: rem(70);
+    }
 
     @media (max-width: $screen-tablet) {
         padding-top: rem(60);
-        padding-left: rem(60);
-        padding-right: rem(60);
-    }
-
-    @media (max-width: $screen-fablet) {
-        padding-left: rem(40);
-        padding-right: rem(40);
     }
 
     @media (max-width: $screen-mobile) {
         padding-top: rem(20);
-        padding-left: rem(30);
-        padding-right: rem(30);
     }
-
 
     &__inner {
         position: relative;
-        width: 100%;
-        padding-left: 50%;
+        width: 50%;
+        margin-left: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         @media (max-width: $screen-tablet) {
-            padding-left: 0;
+            width: 100%;
+            margin-left: 0;
         }
     }
 

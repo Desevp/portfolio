@@ -1,28 +1,32 @@
 .main-screen {
     min-height: 600px;
-    background: url('/img/me.png'), #f6f2ee;
-    background-repeat: no-repeat;
-    background-size: auto 80%;
-    background-position: 0 bottom;
+    background-color: #f6f2ee;
 
-    @media (max-width: $screen-tablet) {
-        background-size: auto 500px;
+    &__bg {
+        background: url('/img/me.png'), #f6f2ee;
+        background-repeat: no-repeat;
+        background-size: auto 80%;
         background-position: 0 bottom;
-        min-height: 480px;
-    }
 
-    @media (max-width: $screen-fablet) {
-        background-position: -200px bottom;
-    }
+        @media (max-width: $screen-tablet) {
+            background-size: auto 500px;
+            background-position: 0 bottom;
+            min-height: 480px;
+        }
 
-    @media (max-width: $screen-mobile) {
-        min-height: 320px;
-        background-size: auto 80vh;
-        background-position: -60px 200%;
-    }
+        @media (max-width: $screen-fablet) {
+            background-position: -200px bottom;
+        }
 
-    @media (max-height: 480px) {
-        background-size: auto 400px;
+        @media (max-width: $screen-mobile) {
+            min-height: 320px;
+            background-size: auto 80vh;
+            background-position: -60px 200%;
+        }
+
+        @media (max-height: 480px) {
+            background-size: auto 400px;
+        }
     }
 
     &__text-block {

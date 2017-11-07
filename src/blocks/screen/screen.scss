@@ -4,20 +4,7 @@
     height: 100vh;
     padding: 0;
 
-    @media (max-width: $screen-tablet) {
-        padding-left: rem(60);
-        padding-right: rem(60);
-    }
-
-    @media (max-width: $screen-fablet) {
-        padding-left: rem(40);
-        padding-right: rem(40);
-    }
-
     @media (max-width: $screen-mobile) {
         padding-top: rem(20);
-        padding-left: rem(30);
-        padding-right: rem(30);
-        padding-bottom: rem(50);
     }
 }

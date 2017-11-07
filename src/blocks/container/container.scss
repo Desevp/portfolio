@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 1920px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $screen-wide-desktop) {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    @media (max-width: $screen-tablet) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding-left: rem(60);
+        padding-right: rem(60);
+    }
+
+    @media (max-width: $screen-fablet) {
+        width: 100%;
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+
+    @media (max-width: $screen-mobile) {
+        padding-left: rem(30);
+        padding-right: rem(30);
+        padding-bottom: rem(60);
+    }
+}

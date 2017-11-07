@@ -11,6 +11,10 @@
         right: 0;
     }
 
+    &_single {
+        height: 70vh;
+    }
+
     &__item {
         position: relative;
         display: flex;

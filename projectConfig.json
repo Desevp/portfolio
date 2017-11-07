@@ -18,7 +18,8 @@
     "swipe-devices": [],
     "main": [],
     "project-lalvani": [],
-    "project-troika": []
+    "project-troika": [],
+    "container": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

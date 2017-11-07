@@ -10,23 +10,25 @@
 
 <body>
     <header class="header">
-        <div class="header__inner">
-            <a class="link" href="mailto:desevp@gmail.com">desevp@gmail.com</a>
-            <div class="social header__social">
-                <div class="social__item">
-                    <a class="link link_block" href="http://www.linkedin.com/in/janedes" target="_blank">
-                        <svg  viewBox="0 0 486.4 486.4"><use xlink:href="img/sprite-svg.svg#linkedin"></use></svg>
-                    </a>
-                </div>
-                <div class="social__item">
-                    <a class="link link_block" href="https://github.com/desevp" target="_blank">
-                        <svg viewBox="0 0 438.5 438.5"><use xlink:href="img/sprite-svg.svg#github"></use></svg>
-                    </a>
-                </div>
-                <div class="social__item">
-                    <a class="link link_block" href="https://www.facebook.com/jany.desyatnikova" target="_blank">
-                        <svg viewBox="0 0 49.7 49.7"><use xlink:href="img/sprite-svg.svg#facebook"></use></svg>
-                    </a>
+        <div class="container">
+            <div class="header__inner">
+                <a class="link" href="mailto:desevp@gmail.com">desevp@gmail.com</a>
+                <div class="social header__social">
+                    <div class="social__item">
+                        <a class="link link_block" href="http://www.linkedin.com/in/janedes" target="_blank">
+                            <svg  viewBox="0 0 486.4 486.4"><use xlink:href="img/sprite-svg.svg#linkedin"></use></svg>
+                        </a>
+                    </div>
+                    <div class="social__item">
+                        <a class="link link_block" href="https://github.com/desevp" target="_blank">
+                            <svg viewBox="0 0 438.5 438.5"><use xlink:href="img/sprite-svg.svg#github"></use></svg>
+                        </a>
+                    </div>
+                    <div class="social__item">
+                        <a class="link link_block" href="https://www.facebook.com/jany.desyatnikova" target="_blank">
+                            <svg viewBox="0 0 49.7 49.7"><use xlink:href="img/sprite-svg.svg#facebook"></use></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,21 +38,23 @@
     <main class="main iscroll">
         <div class="iscroll__inner">
             <section class="screen main-screen">
-                <div class="main-screen__text-block">
-                    <h2>Привет!</h2>
-                    <div class="main-screen__txt">
-                        Я&nbsp;Женя. Верстаю адаптивные сайты.
-                        Живу&nbsp;в&nbsp;Питере.
+                <div class="container main-screen__bg">
+                    <div class="main-screen__text-block">
+                        <h2>Привет!</h2>
+                        <div class="main-screen__txt">
+                            Я&nbsp;Женя. Верстаю адаптивные сайты.
+                            Живу&nbsp;в&nbsp;Питере.
+                        </div>
                     </div>
-                </div>
-                <div class="main-screen__bottom">
-                    <a class="link link_arrow to-next" id="toNext" href="#">
-                        Проекты
-                    </a>
+                    <div class="main-screen__bottom">
+                        <a class="link link_arrow to-next" id="toNext" href="#">
+                            Проекты
+                        </a>
+                    </div>
                 </div>
             </section>
             <section class="screen project-screen project-lalvani" id="firstProject">
-                <div class="project-screen__container">
+                <div class="container project-screen__container">
                     <div class="project-screen__description">
                         <h2 class="project-screen__title">Lalvani</h2>
                         <div class="project-screen__caption">
@@ -72,38 +76,39 @@
                     <div class="project-screen__carousel">
                         <div class="swipe-devices project-screen__carousel-inner">
                             <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
-                                <img src="/img/lalvani-desktop.png" alt="Desktop version">
+                                <img src="/img/troika.png" srcset="/img/lalvani-desktop.png 1x, /img/lalvani-desktop-2x.png 2x" alt="Desktop version">
                             </div>
                             <div class="swipe-devices__item">
-                                <img src="/img/lalvani-tablet.png" alt="Tablet version">
+                                <img src="/img/lalvani-tablet.png" srcset="/img/lalvani-tablet.png 1x, /img/lalvani-tablet-2x.png 2x" alt="Tablet version">
                             </div>
                             <div class="swipe-devices__item">
-                                <img src="/img/lalvani-phone.png" alt="Phone version">
+                                <img src="/img/lalvani-phone.png" srcset="/img/lalvani-phone.png 1x, /img/lalvani-phone-2x.png 2x" alt="Phone version">
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
             <section class="screen project-screen project-troika">
-                <div class="project-screen__container">
+                <div class="container project-screen__container">
                     <div class="project-screen__description">
                         <h2 class="project-screen__title">Кондитерская «Тройка»</h2>
                         <div class="project-screen__caption">
-                            Сервис управления заказами на&nbsp;сайте
+                            Сервис управления заказами на&nbsp;сайте кондитерской
                         </div>
                         <a class="link project-screen__link link_external" href="http://dev.janedes.ru/" target="_blank">dev.janedes.ru</a>
                     </div>
                     <div class="project-screen__carousel">
-                        <div class="swipe-devices project-screen__carousel-inner">
+                        <div class="swipe-devices swipe-devices_single project-screen__carousel-inner">
                             <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
-                                <img src="/img/troika.png" alt="Desktop version">
+                                <img src="/img/troika.png" srcset="/img/troika.png 1x, /img/troika-2x.png 2x" alt="Desktop version">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="screen project-screen project-zykina">
-                <div class="project-screen__container">
+                <div class="container project-screen__container">
                     <div class="project-screen__description">
                         <h2 class="project-screen__title">Zykina Project</h2>
                         <div class="project-screen__caption">
@@ -125,13 +130,13 @@
                     <div class="project-screen__carousel">
                         <div class="swipe-devices project-screen__carousel-inner">
                             <div class="swipe-devices__item swipe-devices__item_larger swipe-devices__item_is-active">
-                                <img src="/img/zp-desktop.png" alt="Desktop version">
+                                <img src="/img/zp-desktop.png" srcset="/img/zp-desktop.png 1x, /img/zp-desktop-2x.png 2x" alt="Desktop version">
                             </div>
                             <div class="swipe-devices__item">
-                                <img src="/img/zp-tablet.png" alt="Tablet version">
+                                <img src="/img/zp-tablet.png" srcset="/img/zp-tablet.png 1x, /img/zp-tablet-2x.png 2x" alt="Tablet version">
                             </div>
                             <div class="swipe-devices__item">
-                                <img src="/img/zp-phone.png" alt="Phone version">
+                                <img src="/img/zp-phone.png" srcset="/img/zp-phone.png 1x, /img/zp-phone-2x.png 2x" alt="Phone version">
                             </div>
                         </div>
                     </div>
