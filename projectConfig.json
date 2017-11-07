@@ -17,7 +17,8 @@
     "swipe-devices": [],
     "main": [],
     "iscroll": [],
-    "project-lalvani": []
+    "project-lalvani": [],
+    "project-troika": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
