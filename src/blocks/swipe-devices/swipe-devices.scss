@@ -2,6 +2,7 @@
     position: relative;
     padding: rem(30) 0;
     height: 60vh;
+    min-height: 400px;
 
     @media (max-width: $screen-fablet) {
         height: 100%;
@@ -9,6 +10,7 @@
         width: 100%;
         left: 0;
         right: 0;
+        min-height: auto;
     }
 
     &_single {
