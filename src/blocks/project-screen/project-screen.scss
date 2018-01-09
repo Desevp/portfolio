@@ -50,8 +50,10 @@
 
     &__carousel {
         position: absolute;
+        top: 50%;
         left: 40%;
         width: 60%;
+        transform: translateY(-50%);
 
         @media (max-width: $screen-tablet) {
             left: 55%;
@@ -60,11 +62,13 @@
 
         @media (max-width: $screen-fablet) {
             position: relative;
+            top: 0;
             left: 0;
             width: 100%;
             order: 2;
             height: auto;
             flex-grow: 1;
+            transform: none;
         }
     }
 

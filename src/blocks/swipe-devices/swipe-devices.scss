@@ -24,14 +24,18 @@
         justify-content: center;
         opacity: 0;
         height: 0;
-        transition: opacity $transition-time;
+        // transition: opacity $transition-time;
+
+        @media (max-width: $screen-tablet) {
+            justify-content: flex-start;
+        }
 
         &_larger img {
 
             @media (max-width: $screen-tablet) {
                 position: relative;
                 max-width: 200%;
-                left: 30%;
+                width: 200%;
             }
 
             @media (max-width: $screen-fablet) {

@@ -8,7 +8,7 @@ var optionsScroll = {
     interactiveScrollbars: true,
     scrollbars: 'custom',
     snap: '.screen',
-    bounce: true,
+    bounce: false,
     click: true,
     disableMouse: false,
     disablePointer: true,
