@@ -15,7 +15,8 @@ var optionsScroll = {
     disableTouch: false,
     preventDefault: false,
     blockMomentum: true,
-    snapSpeed: 600
+    momentumTimeout: 1100,
+    snapSpeed: 400
 }
 
 window.onload = function() {

@@ -1088,6 +1088,8 @@ IScroll.prototype = {
 
 		// Execute the scrollEnd event after 400ms the wheel stopped scrolling
 		clearTimeout(this.wheelTimeout);
+
+
 		this.wheelTimeout = setTimeout(function () {
 			if(!that.options.snap) {
 				that._execEvent('scrollEnd');
@@ -1144,10 +1146,11 @@ IScroll.prototype = {
 					if (!this.blockMomentum) {
 						this.blockMomentum = true;
 						this.goToPage(newX, newY);
-						this.snapTimeout = setTimeout(function () {
+						this.momentumTimer = setTimeout(function () {
 							that.blockMomentum = false;
-							that.snapTimeout = undefined;
-						}, this.options.snapSpeed/2);
+              that.momentumTimer = undefined;
+							that.wheelTimeout = undefined;
+						}, this.options.momentumTimeout || this.options.snapSpeed);
 					} else {
 						//console.log('blocked momentum');
 					}
